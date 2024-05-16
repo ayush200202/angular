@@ -1,0 +1,47 @@
+<div class="{{navbar}} w3-sidebar w3-bar-block" style="width:15%" (mouseleave)="onMouseOut()">
+    <div class="logo w3-bar-item">
+        <img src="../../assets/images/logo.png" class="logo-img" alt="logo">
+    </div>
+    <div class="items w3-bar-item" >
+        <i class="icon fa fa-user" (mouseenter)="onMouseOver()"></i>
+        @if(mouseFlag===true){
+            <a href="#" >My Space</a>
+        }
+    </div>
+    <div class="items w3-bar-item" >
+        <i class="icon fa fa-search" (mouseenter)="onMouseOver()" ></i>
+        @if(mouseFlag===true){
+        <a href="#" >Search</a>
+        }
+    </div>
+    <div class="items w3-bar-item">
+        <i class="icon fa fa-home"  (mouseenter)="onMouseOver()" ></i>
+        @if(mouseFlag===true){
+            <a href="#" >Home</a>
+        }
+    </div>
+    <div class="items w3-bar-item" >
+        <i class="icon fa fa-television" (mouseenter)="onMouseOver()" ></i>
+        @if(mouseFlag===true){
+            <a href="#" >TV</a>
+        }
+    </div>
+    <div class="items w3-bar-item" >
+        <i class="icon fa fa-film" (mouseenter)="onMouseOver()" ></i>
+        @if(mouseFlag===true){
+            <a href="#" >Movies</a>
+        }
+    </div>
+    <div class="items w3-bar-item" >
+        <i class="icon fa fa-futbol-o"(mouseenter)="onMouseOver()" ></i>
+        @if(mouseFlag===true){
+            <a href="#" >Sports</a>
+        }
+    </div>
+    <div class="items w3-bar-item"  > 
+        <i class="icon fa fa-filter" (mouseenter)="onMouseOver()" ></i>
+        @if(mouseFlag===true){
+            <a href="#" >Categories</a>
+        }
+    </div>
+  </div>

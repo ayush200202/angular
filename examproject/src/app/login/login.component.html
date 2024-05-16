@@ -1,0 +1,33 @@
+<p>Login Works</p>
+
+
+<form class="form" [formGroup]="reactiveForm" (ngSubmit)="formLogin()">
+    <div class="column">
+      
+    <div class="input-box">
+        <label>Username : </label>
+      <input type="text" placeholder="username" formControlName="username" />
+      <small>
+        @if(reactiveForm.get("username").errors?.['required'] && reactiveForm.get("username").touched){
+        *userName is Required and it cannot contains numbers
+        }
+      </small>
+    </div>
+    <div class="input-box">
+        <label>Password : </label>
+      <input type="password" placeholder="password" formControlName="password" />
+      <small>
+        @if(reactiveForm.get("password").errors?.['required'] && reactiveForm.get("password").touched){
+        *Password is Required 
+        }
+      </small>
+    </div>
+    </div>
+    
+    
+
+    <input type="submit" value="Submit" class="submit-btn" [disabled]="!reactiveForm.valid"> 
+    <!-- [disabled]="!reactiveForm.valid" -->
+  </form>
+
+  <p>{{msg.msg}}</p>

@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+  }
+img {
+    border-radius: 8px;
+    width: 100%;
+  }
+  h3
+  {
+   font-size: medium;
+   color: red;
+   font-weight: bold;
+   align-content: center;
+  }
+h4
+{
+ font-size: medium;
+ font-style: italic;
+ color: blue;
+}
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 30px;
+  }
+  
+  /* Clearfix (clear floats) */
+.row::after {
+   
+    content: "";
+    clear: both;
+    display: table;
+  }

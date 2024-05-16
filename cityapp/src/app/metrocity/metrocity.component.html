@@ -1,0 +1,18 @@
+
+<!-- <ol>
+    <li>{{city1}}</li>
+    <li>{{city2}}</li>
+</ol> -->
+
+<div>
+    <h2>Metro Cities</h2>
+    <ul>
+      <li *ngFor="let city of metroCities" (click)="onSelectCity(city.name)">
+        <span>{{ city.icon }}</span> {{ city.name }}
+      </li>
+    </ul>
+</div>
+<div *ngIf="selectedCity">
+    <h3>Selected City: {{ selectedCity }}</h3>
+</div>
+  

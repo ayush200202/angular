@@ -1,0 +1,54 @@
+*{
+    color: white;
+    background-color: rgba(0, 0, 0,0.0);
+    
+}
+.navbar #slide{
+    height: 100%;
+    background-color: rgba(0, 0, 0,0.5);
+    transition: 1s;
+    left:0;
+}
+
+.non-navbar{
+    background-color: rgb(10, 3, 20,0.0);
+
+}
+
+.logo{
+    height: 20%;
+    width: 100%;
+    padding-top: 30px;
+    justify-content: center;
+}
+
+.logo-img{
+    height: 50px;
+    width: 50px;
+}
+
+.items{
+    height: 10%;
+    width: 100%;
+    font-size: large;
+    justify-content: center;
+    text-decoration: none;
+}
+a{
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    text-decoration: none;
+}
+a:hover{
+    color: azure;
+    font-style: bold;
+    font-size: larger;
+    background-color: rgba(0, 0, 0,0.0);
+    text-decoration: none;
+}
+
+.icon{
+    padding-right:20px ;
+}
+

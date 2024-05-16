@@ -1,0 +1,76 @@
+
+    <div class="movie-list-container">
+      <h1 class="movie-list-title">Latest Movies</h1>
+      <div class="movie-list-wrapper">
+          <div class="movie-list">
+              <div class="movie-list-item">
+                  <img class="movie-list-item-img" src="../../assets/images/photos/Home/2.jpg" alt="">
+                  <span class="movie-list-item-title">Enola Holmes 2</span>
+                  <p class="movie-list-item-desc">Enola Holmes takes on her first case as a detective, but to unravel the mystery of a missing girl, she'll need some help from friends -- and brother Sherlock</p>
+              </div>
+              <div class="movie-list-item">
+                  <img class="movie-list-item-img" src="../../assets/images/photos/Home/3.webp" alt="">
+                  <span class="movie-list-item-title">Kantara</span>
+                  <p class="movie-list-item-desc">Kantara is a 2022 Indian Kannada-language action thriller film written and directed by Rishab Shetty, and produced by Vijay Kiragandur, under Hombale Films. The film stars Shetty as a Kambala champion who is at loggerheads with an upright DRFO officer, Murali.</p>
+
+              </div>
+              <div class="movie-list-item">
+                  <img class="movie-list-item-img" src="../../assets/images/photos/Home/4.jpg" alt="">
+                  <span class="movie-list-item-title">Mili</span>
+                  <p class="movie-list-item-desc">Young Mili is abducted and finds herself trapped in a freezer with no way out, and every ticking second lowers her chances of survival.</p>
+                  
+              </div>
+              <div class="movie-list-item">
+                  <img class="movie-list-item-img" src="../../assets/images/photos/Home/5.webp" alt="">
+                  <span class="movie-list-item-title"> Fantastic Beast</span>
+                  <p class="movie-list-item-desc">Dumbledore assembles a team of wizards, witches and a Muggle baker to oppose the rise of Gellert Grindelwald. They hatch a plan to confuse Grindelwald and stop him from attaining political power.</p>
+                  
+              </div>
+              <div class="movie-list-item">
+                  <img class="movie-list-item-img" src="../../assets/images/photos/Home/7.jpg">
+                  <span class="movie-list-item-title">KGF 2</span>
+                  <p class="movie-list-item-desc">Rocky takes control of the Kolar Gold Fields and his newfound power makes the government as well as his enemies jittery. However, he still has to confront Ramika, Adheera and Inayat..</p>
+                  
+              </div>
+              <div class="movie-list-item">
+                  <img class="movie-list-item-img" src="../../assets/images/photos/Home/6.jpg" alt="">
+                  <span class="movie-list-item-title">Brahmastra</span>
+                  <p class="movie-list-item-desc">This is the story of Shiva who sets out in search of love and self-discovery. During his journey, he has to face many evil forces that threaten our existence.</p>
+                  
+              </div>
+              <div class="movie-list-item">
+                  <img class="movie-list-item-img" src="../../assets/images/photos/Home/8.jpg" alt="">
+                  <span class="movie-list-item-title">Wakanda Forever</span>
+                  <p class="movie-list-item-desc">Queen Ramonda, Shuri, M'Baku, Okoye and the Dora Milaje fight to protect their nation from intervening world powers in the wake of King T'Challa's death. As the Wakandans strive to embrace their next chapter, the heroes must band together with Nakia and Everett Ross to forge a new path for their beloved kingdom.</p>
+                  
+              </div>
+          </div>
+          <i class="fa-solid fa-arrow-right"></i>
+      </div>
+    </div>
+ 
+
+    <script>
+      const arrows = document.querySelectorAll(".arrow");
+    const movieLists = document.querySelectorAll(".movie-list");
+
+    arrows.forEach((arrow, i) => {
+      const itemNumber = movieLists[i].querySelectorAll("img").length;
+      let clickCounter = 0;
+      arrow.addEventListener("click", () => {
+        const ratio = Math.floor(window.innerWidth / 270);
+        clickCounter++;
+        if (itemNumber - (4 + clickCounter) + (4 - ratio) >= 0) {
+          movieLists[i].style.transform = `translateX(${
+            movieLists[i].computedStyleMap().get("transform")[0].x.value - 300
+          }px)`;
+        } else {
+          movieLists[i].style.transform = "translateX(0)";
+          clickCounter = 0;
+        }
+      });
+
+      console.log(Math.floor(window.innerWidth / 270));
+    });
+
+    </script>

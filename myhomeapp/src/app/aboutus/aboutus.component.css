@@ -1,0 +1,21 @@
+.first{
+    color: blue;
+}
+
+.second{
+    font:bold;
+    font-size: medium;
+    color: red;
+}
+
+.third{
+    background-color: aquamarine;
+    border-style:groove;
+}
+
+.fourth{
+    font: italic;
+    font-style: italic;
+    color: #786421;
+    background-color: #080707;
+}

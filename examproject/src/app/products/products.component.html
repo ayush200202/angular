@@ -1,0 +1,16 @@
+<p>products works!</p>
+<button (click)="getProduct()">Get Products</button>
+<table border="1">
+@for(item of mydata;track item){
+    <tr>
+        <td>{{item.pid}}</td>
+        <td>{{item.ptitle}}</td>
+        <td>{{item.pprice}}</td>
+        <td>{{item.pdesc}}</td>
+        <td><a href="#" routerLink="{{item.pid}}" >Details</a></td>
+        
+    </tr>
+}
+</table>
+<br><br>
+<router-outlet></router-outlet>

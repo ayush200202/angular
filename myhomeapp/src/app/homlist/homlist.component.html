@@ -1,0 +1,50 @@
+<p>homlist works!</p>
+
+
+
+<div class="row">
+@for (home of homelist; track $index) {
+ @if ($odd) {   
+<div class="column">
+    <h3>{{home.title}}</h3>
+    <img src="{{home.img}}" alt="home">
+    <h4>{{home.city | uppercase}}</h4>
+    <label>
+        <input type="radio" name="currency" value="INR" (change)="changeCurrency($event)">Rupee
+    </label>
+    <label>
+        <input type="radio" name="currency" value="USD" (change)="changeCurrency($event)">Dollar
+    </label>
+    @if(currencyType==="INR"){
+        <h4>{{home.price|currency:'INR'}}</h4>
+    }
+    @else if(currencyType==="USD") {
+        <h4>{{(home.price/83.5)|currency:'USD'}}</h4>
+    }
+    <button [disabled]="!(home.status==='Available')">Book now</button>
+</div>
+}
+@else {
+    <div class="column">
+    <h4>{{$index}}</h4>
+    <h3>{{home.title}}</h3>
+    <img src="{{home.img}}" alt="home">
+    <h4>{{home.city | uppercase}}</h4>
+    <label>
+        <input type="radio" name="currency" value="INR" (change)="changeCurrency($event)">Rupee
+    </label>
+    <label>
+        <input type="radio" name="currency" value="USD" (change)="changeCurrency($event)">Dollar
+    </label>
+    @if(currencyType==="INR"){
+        <h4>{{home.price|currency:'INR'}}</h4>
+    }
+    @else if(currencyType==="USD") {
+        <h4>{{(home.price/83.5)|currency:'USD'}}</h4>
+    }
+    <button [disabled]="!(home.status==='Available')">Book now</button>
+    </div> 
+}
+
+}
+</div>

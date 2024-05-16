@@ -1,0 +1,68 @@
+<p>signup works!</p>
+
+<form class="form" [formGroup]="reactiveForm" (ngSubmit)="formSignupSubmit()">
+    <div class="column">
+      <div class="input-box">
+        <label>Full Name : </label>
+        <!--cname,cmobile,caddr,cemail,username,password -->
+        <input type="text" placeholder="First Name" formControlName="cname" />
+        <small>
+          @if(reactiveForm.get("cname").errors?.['required'] && reactiveForm.get("cname").touched){
+          *Name is Required and it cannot contains numbers
+          }
+        </small>
+      </div>
+      <div class="input-box">
+        <label>Email : </label>
+        <input type="email" placeholder="email"  formControlName="cemail"/>
+        <small>
+            @if(reactiveForm.get("cemail").errors?.['required'] && reactiveForm.get("cemail").touched){
+            *Email is Required and it cannot contains numbers
+            }
+        </small>
+      </div>
+    </div>    
+
+    <div class="input-box">
+        <label>Mobile Number : </label>
+      <input type="text" placeholder="Mobile Number" formControlName="cmobile" />
+      <small>
+        @if(reactiveForm.get("cmobile").errors?.['required'] && reactiveForm.get("cmobile").touched){
+        *Mobile Number is Required and it only contains numbers
+        }
+      </small>
+    </div>
+    <div class="input-box">
+        <label>Address : </label>
+      <input type="text" placeholder="Address" formControlName="caddr" />
+      <small>
+        @if(reactiveForm.get("caddr").errors?.['required'] && reactiveForm.get("caddr").touched){
+        *Address is Required
+        }
+      </small>
+    </div>
+    <div class="input-box">
+        <label>Username : </label>
+      <input type="text" placeholder="username" formControlName="username" />
+      <small>
+        @if(reactiveForm.get("username").errors?.['required'] && reactiveForm.get("username").touched){
+        *userName is Required and it cannot contains numbers
+        }
+      </small>
+    </div>
+    <div class="input-box">
+        <label>Password : </label>
+      <input type="password" placeholder="password" formControlName="password" />
+      <small>
+        @if(reactiveForm.get("password").errors?.['required'] && reactiveForm.get("password").touched){
+        *Password is Required 
+        }
+      </small>
+    </div>
+
+    
+    
+
+    <input type="submit" value="Submit" class="submit-btn" [disabled]="!reactiveForm.valid"> 
+    <!-- [disabled]="!reactiveForm.valid" -->
+  </form>
